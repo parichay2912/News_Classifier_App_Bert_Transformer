@@ -1,0 +1,56 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Virtual environments
+.env/
+.venv/
+env/
+venv/
+myenv/
+
+# Pytest cache
+.pytest_cache/
+
+# VSCode settings
+.vscode/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Logs and databases
+*.log
+*.sqlite3
+
+# macOS files
+.DS_Store
+
+# Python model and cache files
+*.pt
+*.bin
+*.h5
+*.ckpt
+
+# Docker files
+*.dockerignore
+Dockerfile
+
+# SageMaker or AWS files (optional)
+.aws/
+.terraform/
+
+# Misc
+*.swp
+*.swo
+*.bak
+
+# Ignore your saved model folder if large
+model/saved_model/
+data/
