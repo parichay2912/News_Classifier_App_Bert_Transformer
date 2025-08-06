@@ -6,6 +6,4 @@ scikit-learn
 uvicorn
 pandas
 tqdm
-pytest
-re
-httpx# for testing 
+httpx

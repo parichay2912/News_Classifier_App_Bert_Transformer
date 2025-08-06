@@ -1,0 +1,76 @@
+.news-form-container {
+  margin: 20px auto;
+  padding: 24px;
+  color: black;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-family: sans-serif;
+  background-color: #f9f9f9;
+  height: 100%;
+  width: 100%;
+}
+
+.news-form-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.news-form-container form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.news-form-container input,
+.news-form-container textarea,
+.news-form-container select {
+  padding: 10px 14px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  flex: 1 1 200px;
+  box-sizing: border-box;
+}
+
+.news-form-container input {
+  height: 40px;
+}
+
+.news-form-container textarea {
+  height: 80px;
+  resize: vertical;
+  flex: 2 1 100%;
+}
+
+.news-form-container select {
+  height: 40px;
+  flex: 1 1 200px;
+}
+
+.news-form-container button {
+  height: 40px;
+  padding: 0 20px;
+  font-size: 1rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.news-form-container button:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
+.news-form-container button:not(:first-of-type) {
+  margin-top: 10px;
+}
+
+.news-form-container p {
+  margin-top: 12px;
+  font-size: 1rem;
+}

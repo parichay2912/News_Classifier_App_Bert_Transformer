@@ -52,5 +52,6 @@ Dockerfile
 *.bak
 
 # Ignore your saved model folder if large
-model/saved_model/
+model/
 data/
+.env
