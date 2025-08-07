@@ -51,9 +51,10 @@
 
 .news-form-container button {
   height: 40px;
+  margin-left: 5px;
   padding: 0 20px;
   font-size: 1rem;
-  background-color: #007bff;
+  background-color: rgb(238, 71, 135);
   color: #fff;
   border: none;
   border-radius: 6px;
@@ -73,4 +74,19 @@
 .news-form-container p {
   margin-top: 12px;
   font-size: 1rem;
+  background-color: lightcyan;
+  border: 1px solid rgb(160, 95, 97);  /* ✅ Add border style */
+  border-radius: 8px;
+  padding: 8px;  /* ✅ Optional: add padding for better look */
+}
+
+h2 {
+  margin-top: 20px;
+  font-size: 1.5rem;
+  color: #2c3e50;                        /* dark bluish-gray */
+  text-align: center;
+  background-color: aquamarine;
+  border: 2px solid #a05f61;      /* match border color from <p> */
+  padding-bottom: 6px;
+  margin-bottom: 12px;
 }

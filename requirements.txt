@@ -7,3 +7,5 @@ uvicorn
 pandas
 tqdm
 httpx
+openai
+python-dotenv

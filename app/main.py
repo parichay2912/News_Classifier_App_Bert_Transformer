@@ -40,8 +40,10 @@ def get_model_info():
 @app.post("/predict")
 def classify_article(item: NewsItem):
     full_text = item.title + " " + item.description
-    prediction = predict_topic(full_text, item.model_name)
-    return {"model_used": item.model_name, "predicted_class_label": prediction}
+    
+    prediction,confidence = predict_topic(full_text, item.model_name)
+  
+    return {"model_used": item.model_name, "predicted_class_label": prediction,"confidence":confidence}
 
 @app.post("/generate-summary")
 def summarize_article(item: NewsItem):

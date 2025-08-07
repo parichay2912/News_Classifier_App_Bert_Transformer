@@ -1,15 +1,16 @@
 version: "3.8"
+
 services:
   frontend:
     build:
-      context: .
-      dockerfile: frontend/Dockerfile
+      context: ./frontend
+      dockerfile: Dockerfile
     ports:
       - "3000:3000"
-    command: ["npm", "start"]
-    working_dir: /app
     volumes:
       - ./frontend:/app
+      - /app/node_modules   # avoid overwriting node_modules
+    command: ["npm", "run", "dev"]
     depends_on:
       - backend
 
@@ -23,4 +24,4 @@ services:
       - ./app:/app/app
       - ./model:/app/model
     environment:
-      - MODEL_PATH=/app/model/saved_model/
+      - MODEL_PATH=/app/model

@@ -1,5 +1,5 @@
 import torch
-from transformers import BertForSequenceClassification, BertTokenizer
+from transformers import BertForSequenceClassification, RobertaTokenizer,AutoTokenizer
 from sklearn.metrics import accuracy_score, classification_report
 import pandas as pd
 from torch.utils.data import DataLoader, TensorDataset
@@ -7,8 +7,9 @@ from torch.utils.data import DataLoader, TensorDataset
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 def evaluate(batch_size=32):
-    tokenizer = BertTokenizer.from_pretrained("model/saved_model/")
-    model = BertForSequenceClassification.from_pretrained("model/saved_model/")
+    tokenizer = AutoTokenizer.from_pretrained("smart_news_classifier/model/roberta-base")
+    #tokenizer = RobertaTokenizer.from_pretrained("smart_news_classifier/model/roberta-base")
+    model = BertForSequenceClassification.from_pretrained("smart_news_classifier/model/roberta-base")
     model.to(device)
     model.eval()
 

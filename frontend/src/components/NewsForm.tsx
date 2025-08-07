@@ -9,6 +9,7 @@ const NewsForm = () => {
   const [category, setCategory] = useState("");
   const [summary, setSummary] = useState("");
   const [improvedTitle, setImprovedTitle] = useState("");
+  const [confidence, setconfidence] = useState("");
 
   const [modelName, setModelName] = useState("bert-base-uncased");
 
@@ -20,6 +21,7 @@ const NewsForm = () => {
       model_name: modelName,
     });
     setCategory(result.predicted_class_label || result.category || "");
+    setconfidence(result.confidence|| "")
   };
 
   const handleSummary = async () => {
@@ -51,6 +53,7 @@ const NewsForm = () => {
           onChange={(e) => setDescription(e.target.value)}
           required
         />
+        
 
         <select
           value={modelName}
@@ -72,7 +75,7 @@ const NewsForm = () => {
       <button onClick={handleImprovedTitle} disabled={!title || !description}>
         Improve Headline
       </button>
-
+      {confidence && <p><strong>Confidence:</strong> {confidence}</p>}
       {category && <p><strong>Category:</strong> {category}</p>}
       {summary && <p><strong>Summary:</strong> {summary}</p>}
       {improvedTitle && <p><strong>Improved Title:</strong> {improvedTitle}</p>}
